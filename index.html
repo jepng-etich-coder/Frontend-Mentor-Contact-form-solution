@@ -16,102 +16,119 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <div class="toast-hidden">
-      <img src="./assets/icon-success-check.svg" alt="success check icon" />
-      <p>Message Sent!</p>
-      <p>Thanks for completing the form. We´ll be in touch soon</p>
+    <div class="toast-hidden" role="alert">
+      <div class="toast-hidden-container">
+        <img src="./assets/icon-success-check.svg" alt="success check icon" />
+        <p>Message Sent!</p>
+      </div>
+      <p class="toast-txt">
+        Thanks for completing the form. We´ll be in touch soon
+      </p>
     </div>
 
     <form id="myForm" novalidate>
       <header><h2>Contact Us</h2></header>
-      <fieldset class="form-username">
-        <label for="firstname"
-          >First Name: <span class="asterix">*</span></label
-        >
-        <input
-          type="text"
-          id="firstname"
-          name="firstname"
-          class="form-input"
-          required
-        />
-        <p class="error-msg">This field is required</p>
-        <label for="lastname">Last Name: <span class="asterix">*</span></label>
-        <input
-          type="text"
-          id="lastname"
-          name="lastname"
-          class="form-input"
-          required
-        />
-        <p class="error-msg">This field is required</p>
+      <fieldset class="form-username-wrapper">
+        <div class="form-username">
+          <label for="firstname" class="form-label"
+            >First Name: <span class="asterix">*</span></label
+          >
+          <input
+            type="text"
+            id="firstname"
+            name="first name"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-username">
+          <label for="lastname" class="form-label"
+            >Last Name: <span class="asterix">*</span></label
+          >
+          <input
+            type="text"
+            id="lastname"
+            name="last name"
+            class="form-input"
+            required
+          />
+        </div>
       </fieldset>
+      <p class="error-msg">This field is required</p>
 
-      <fieldset class="form-email-address">
-        <label for="email">Email Address: <span>*</span></label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          class="form-input"
-          required
-        />
-        <p class="error-msg">Please enter a valid email address</p>
-      </fieldset>
+      <!-- <fieldset class="form-email-address"> -->
+      <label for="email" class="form-label"
+        >Email Address: <span>*</span></label
+      >
+      <input type="text" id="email" name="email" class="form-input" required />
+      <p class="error-msg">Please enter a valid email address</p>
+      <!-- </fieldset> -->
 
       <fieldset class="form-query">
         <label for="query-type">Query Type: <span>*</span></label>
-        <div class="query-wrapper" style="border: 1px solid black">
-          <input
-            type="radio"
-            id="general"
-            name="query-type"
-            class="query-type"
-            value="General Enquiry"
-            required
-          />
-          <label for="general">General Enquiry</label>
+        <div class="query-wrapper-container">
+          <div class="query-wrapper">
+            <label for="general" class="radio-label"
+              ><input
+                type="radio"
+                id="general"
+                name="query-type"
+                class="query-type"
+                value="General Enquiry"
+                required
+              />
+              <span class="custom-radio"></span>General Enquiry</label
+            >
+          </div>
+          <div class="query-wrapper">
+            <label for="support" class="radio-label"
+              ><input
+                type="radio"
+                id="support"
+                name="query-type"
+                class="query-type"
+                value="Support Request"
+                required
+              />
+              <span class="custom-radio"></span>Support Request</label
+            >
+          </div>
         </div>
-        <div class="query-wrapper" style="border: 1px solid black">
-          <input
-            type="radio"
-            id="Support"
-            name="query-type"
-            class="query-type"
-            value="Support Request"
-            required
-          />
-          <label for="suport">Support Request</label>
-        </div>
-
-        <p class="error-msg">Please select query type</p>
       </fieldset>
-
-      <fieldset class="form-message">
-        <label for="message"> Message: <span>*</span></label>
-        <textarea
-          name="message"
-          id="message"
-          class="form-input"
-          required
-        ></textarea>
-        <p class="error-msg">This field is required</p>
-      </fieldset>
+      <p class="error-msg">Please select query type</p>
+      <!-- 
+      <fieldset class="form-message"> -->
+      <label for="message" class="form-label"> Message: <span>*</span></label>
+      <textarea
+        name="message"
+        id="message"
+        class="form-input"
+        required
+      ></textarea>
+      <p class="error-msg">This field is required</p>
+      <!-- </fieldset> -->
 
       <fieldset class="form-consent">
-        <label for="checkbox">
-          <input type="checkbox" id="checkbox" name="consent" required /> I
-          consent to being contacted by the team<span>*</span></label
-        >
+        <!-- <div class="form-consent-txt">
+          <input type="checkbox" id="checkbox" name="consent" required />
+          <p>I consent to being contacted by the team<span>*</span></p>
+        </div> -->
+        <label class="checkbox-label">
+          <input type="checkbox" id="checkbox" name="consent" required />
+          <span class="custom-checkbox"></span>
+          I consent to being contacted by the team<span>*</span>
+        </label>
         <p class="error-msg">
           To submit this form please consent to being contacted
         </p>
-        <p class="consent-box-checked">
+        <p class="consent-txt" id="consent-box-checked">
           I hereby consent to being contacted by the team<span>*</span>
         </p>
       </fieldset>
 
-      <button type="submit" id="submit">Submit</button>
+      <button type="submit" class="btn" id="submit">Submit</button>
     </form>
+
+    <script src="./script/script.js"></script>
   </body>
 </html>

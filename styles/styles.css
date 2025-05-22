@@ -1,3 +1,5 @@
+/*===============Base Reset===============*/
+
 *,
 ::before,
 ::after {
@@ -20,6 +22,7 @@ fieldset {
   --Grey: hsl(187, 24%, 22%);
   --font-main: "Karla", sans-serif;
   --font-size: 1rem;
+  --border-radius: 10px;
 }
 
 body {
@@ -30,10 +33,178 @@ body {
   align-items: center;
   font-family: var(--font-main);
   font-size: var(--font-size);
+  background-color: var(--Green1);
 }
 
+/*===============Typography===============*/
+
+h1,
+.form-input,
+.btn {
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+}
+
+/*============Toast/Error message=========*/
+.toast-hidden {
+  background-color: var(--Grey);
+  color: var(--White);
+  padding: 1em;
+  border-radius: var(--border-radius);
+}
+
+.error-msg,
+.consent-txt {
+  color: var(--Red);
+}
+
+.toast-hidden,
+.error-msg,
+.consent-txt {
+  display: none;
+}
+
+span {
+  color: var(--Green);
+}
+
+/*===============Form Layout===============*/
+
 form {
-  border: 1px solid black;
-  max-width: 700px;
+  max-width: 600px;
   width: 100%;
+  background-color: var(--White);
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+}
+
+.form-input,
+.btn,
+.query-wrapper {
+  border: 1px solid var(--Grey1);
+  padding: 0.5em;
+  border-radius: 8px;
+}
+
+.form-input:hover,
+.query-wrapper:hover {
+  border: 1px solid var(--Green);
+}
+
+.form-input:focus,
+.query-wrapper:focus {
+  outline: none;
+  border: 1px solid var(--Green);
+  cursor: pointer;
+}
+.form-input:active,
+.query-wrapper:active {
+  border: 1px solid var(--Green);
+  cursor: pointer;
+}
+
+.form-label,
+.form-query,
+.toast-txt {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.query-wrapper-container {
+  margin-top: 1em;
+}
+
+.query-type {
+  margin: 0 0.5em 0 1em;
+}
+
+.form-username-wrapper,
+.query-wrapper-container,
+.toast-hidden-container,
+.form-consent-txt {
+  display: flex;
+  gap: 0.5em;
+}
+
+.query-wrapper-container {
+  align-content: center;
+}
+
+.query-wrapper,
+.form-username {
+  flex-grow: 1;
+}
+
+.form-username {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  max-width: 100%;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.form-consent,
+.btn {
+  margin-top: 2.5em;
+}
+
+/*===============Radio input styling ===============*/
+.radio-label {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+  gap: 0.2em;
+  font-size: var(--font-size);
+  cursor: pointer;
+  /* position: relative; */
+}
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--Green);
+  cursor: pointer;
+}
+
+/*===============Checkbox===============*/
+/* Style the checkbox label */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: var(--font-size);
+  cursor: pointer;
+  position: relative;
+}
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--Green); /* Supported in most modern browsers */
+  background-color: var(--Green1); /* May have no effect in some browsers */
+}
+/*===============Button===============*/
+.btn {
+  color: var(--White);
+  background-color: var(--Green);
+}
+
+.btn:hover {
+  background-color: var(--Grey);
 }
