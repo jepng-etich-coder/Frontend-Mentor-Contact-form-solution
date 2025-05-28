@@ -22,48 +22,57 @@
         <img src="./assets/icon-success-check.svg" alt="success check icon" />
         <p>Message Sent!</p>
       </div>
-      <p class="toast-txt">
-        Thanks for completing the form. We´ll be in touch soon
+      <p class="toast-text">
+        Thanks for completing the form. We will be in touch soon
       </p>
     </div>
 
     <form id="myForm" novalidate>
       <header><h2>Contact Us</h2></header>
-      <fieldset class="form-username-wrapper">
-        <div class="form-username">
-          <label for="firstname" class="form-label"
-            >First Name: <span class="asterix">*</span></label
-          >
-          <input
-            type="text"
-            id="firstname"
-            name="first name"
-            class="form-input"
-            required
-          />
-        </div>
-        <div class="form-username">
-          <label for="lastname" class="form-label"
-            >Last Name: <span class="asterix">*</span></label
-          >
-          <input
-            type="text"
-            id="lastname"
-            name="last name"
-            class="form-input"
-            required
-          />
+      <fieldset class="form-username-inputs">
+        <div class="form-username-wrapper">
+          <div class="form-username">
+            <label for="firstname" class="form-label"
+              >First Name: <span class="asterix">*</span></label
+            >
+            <input
+              type="text"
+              id="firstname"
+              name="first name"
+              class="form-input"
+              required
+            />
+            <p class="error-msg">This field is required</p>
+          </div>
+          <div class="form-username">
+            <label for="lastname" class="form-label"
+              >Last Name: <span class="asterix">*</span></label
+            >
+            <input
+              type="text"
+              id="lastname"
+              name="last name"
+              class="form-input"
+              required
+            />
+            <p class="error-msg">This field is required</p>
+          </div>
         </div>
       </fieldset>
-      <p class="error-msg">This field is required</p>
 
-      <!-- <fieldset class="form-email-address"> -->
-      <label for="email" class="form-label"
-        >Email Address: <span>*</span></label
-      >
-      <input type="text" id="email" name="email" class="form-input" required />
-      <p class="error-msg">Please enter a valid email address</p>
-      <!-- </fieldset> -->
+      <fieldset class="form-email-address">
+        <label for="email" class="form-label"
+          >Email Address: <span>*</span></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+          required
+        />
+        <p class="error-msg">Please enter a valid email address</p>
+      </fieldset>
 
       <fieldset class="form-query">
         <label for="query-type">Query Type: <span>*</span></label>
@@ -81,6 +90,7 @@
               <span class="custom-radio"></span>General Enquiry</label
             >
           </div>
+
           <div class="query-wrapper">
             <label for="support" class="radio-label"
               ><input
@@ -95,25 +105,21 @@
             >
           </div>
         </div>
+        <p class="error-msg">Please select query type</p>
       </fieldset>
-      <p class="error-msg">Please select query type</p>
-      <!-- 
-      <fieldset class="form-message"> -->
-      <label for="message" class="form-label"> Message: <span>*</span></label>
-      <textarea
-        name="message"
-        id="message"
-        class="form-input"
-        required
-      ></textarea>
-      <p class="error-msg">This field is required</p>
-      <!-- </fieldset> -->
+
+      <fieldset class="form-message">
+        <label for="message" class="form-label"> Message: <span>*</span></label>
+        <textarea
+          name="message"
+          id="message"
+          class="form-input"
+          required
+        ></textarea>
+        <p class="error-msg">This field is required</p>
+      </fieldset>
 
       <fieldset class="form-consent">
-        <!-- <div class="form-consent-txt">
-          <input type="checkbox" id="checkbox" name="consent" required />
-          <p>I consent to being contacted by the team<span>*</span></p>
-        </div> -->
         <label class="checkbox-label">
           <input type="checkbox" id="checkbox" name="consent" required />
           <span class="custom-checkbox"></span>
@@ -122,14 +128,14 @@
         <p class="error-msg">
           To submit this form please consent to being contacted
         </p>
-        <p class="consent-txt" id="consent-box-checked">
-          I hereby consent to being contacted by the team<span>*</span>
+        <p class="consent-text" id="consent-box-checked">
+          I hereby consent to being contacted by the team
         </p>
       </fieldset>
 
       <button type="submit" class="btn" id="submit">Submit</button>
     </form>
 
-    <script src="./script/script.js"></script>
+    <script src="./script/index.js"></script>
   </body>
 </html>

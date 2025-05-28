@@ -53,19 +53,26 @@ h1,
   border-radius: var(--border-radius);
 }
 
-.error-msg,
-.consent-txt {
+.error-msg {
   color: var(--Red);
+}
+
+.consent-text {
+  color: var(--Grey);
 }
 
 .toast-hidden,
 .error-msg,
-.consent-txt {
+.consent-text {
   display: none;
 }
 
-span {
+.span {
   color: var(--Green);
+}
+
+.input-error {
+  border: 2px solid var(--Red);
 }
 
 /*===============Form Layout===============*/
@@ -99,6 +106,7 @@ form {
   border: 1px solid var(--Green);
   cursor: pointer;
 }
+
 .form-input:active,
 .query-wrapper:active {
   border: 1px solid var(--Green);
@@ -107,7 +115,8 @@ form {
 
 .form-label,
 .form-query,
-.toast-txt {
+.toast-text,
+.form-message {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
@@ -133,11 +142,13 @@ form {
 }
 
 .query-wrapper,
-.form-username {
+.form-username,
+.form-email-address {
   flex-grow: 1;
 }
 
-.form-username {
+.form-username,
+.form-email-address {
   display: flex;
   flex-direction: column;
 }
