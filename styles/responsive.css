@@ -1,0 +1,31 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  h1,
+  .form-input,
+  .btn {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+  }
+
+  form {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .form-username-wrapper,
+  .query-wrapper-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .toast-hidden {
+    background-color: var(--Grey);
+    color: var(--White);
+    padding: 0.25em;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+  }
+
+  .icon-check {
+    width: 15px;
+  }
+}

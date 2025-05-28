@@ -15,11 +15,16 @@
     />
     <!-- styles -->
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
   </head>
   <body>
     <div class="toast-hidden" role="alert">
       <div class="toast-hidden-container">
-        <img src="./assets/icon-success-check.svg" alt="success check icon" />
+        <img
+          src="./assets/icon-success-check.svg"
+          class="icon-check"
+          alt="success check icon"
+        />
         <p>Message Sent!</p>
       </div>
       <p class="toast-text">
@@ -62,7 +67,7 @@
 
       <fieldset class="form-email-address">
         <label for="email" class="form-label"
-          >Email Address: <span>*</span></label
+          >Email Address: <span class="asterix">*</span></label
         >
         <input
           type="email"
@@ -75,7 +80,9 @@
       </fieldset>
 
       <fieldset class="form-query">
-        <label for="query-type">Query Type: <span>*</span></label>
+        <label for="query-type"
+          >Query Type: <span class="asterix">*</span></label
+        >
         <div class="query-wrapper-container">
           <div class="query-wrapper">
             <label for="general" class="radio-label"
@@ -109,7 +116,9 @@
       </fieldset>
 
       <fieldset class="form-message">
-        <label for="message" class="form-label"> Message: <span>*</span></label>
+        <label for="message" class="form-label">
+          Message: <span class="asterix">*</span></label
+        >
         <textarea
           name="message"
           id="message"
@@ -123,7 +132,10 @@
         <label class="checkbox-label">
           <input type="checkbox" id="checkbox" name="consent" required />
           <span class="custom-checkbox"></span>
-          I consent to being contacted by the team<span>*</span>
+          <p>
+            I consent to being contacted by the team
+            <span class="asterix">*</span>
+          </p>
         </label>
         <p class="error-msg">
           To submit this form please consent to being contacted

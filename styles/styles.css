@@ -131,8 +131,7 @@ form {
 
 .form-username-wrapper,
 .query-wrapper-container,
-.toast-hidden-container,
-.form-consent-txt {
+.toast-hidden-container {
   display: flex;
   gap: 0.5em;
 }
@@ -162,7 +161,7 @@ textarea {
 
 .form-consent,
 .btn {
-  margin-top: 2.5em;
+  margin-top: 2em;
 }
 
 /*===============Radio input styling ===============*/
