@@ -22,6 +22,7 @@ fieldset {
   --Grey: hsl(187, 24%, 22%);
   --font-main: "Karla", sans-serif;
   --font-size: 1rem;
+  --font-size2: 0.9rem;
   --border-radius: 10px;
 }
 
@@ -49,16 +50,19 @@ h1,
 .toast-hidden {
   background-color: var(--Grey);
   color: var(--White);
+  font-size: var(--font-size2);
   padding: 1em;
   border-radius: var(--border-radius);
 }
 
 .error-msg {
   color: var(--Red);
+  font-size: var(--font-size2);
 }
 
 .consent-text {
   color: var(--Grey);
+  font-size: var(--font-size2);
 }
 
 .toast-hidden,
@@ -73,6 +77,10 @@ h1,
 
 .input-error {
   border: 2px solid var(--Red);
+}
+
+.asterix {
+  color: var(--Green);
 }
 
 /*===============Form Layout===============*/
@@ -118,15 +126,10 @@ form {
 .toast-text,
 .form-message {
   margin-top: 1.5em;
-  margin-bottom: 0.5em;
 }
-
-.query-wrapper-container {
-  margin-top: 1em;
-}
-
-.query-type {
-  margin: 0 0.5em 0 1em;
+.form-input,
+.query-wrapper {
+  margin-top: 0.5em;
 }
 
 .form-username-wrapper,
